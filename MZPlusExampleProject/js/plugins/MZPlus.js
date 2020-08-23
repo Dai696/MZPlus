@@ -4,6 +4,7 @@ MZPlus.Core = MZPlus.Core || {};
 //=============================================================================
 // Anisoft Plugin - MZPlus
 // MZPlus.js
+// Based off QPlus https://github.com/quxios/QMV-Master-Demo/blob/master/js/plugins/QPlus.js
 //=============================================================================
 var Imported = Imported || {};
 Imported.MZPlus = "0.0.1";
@@ -232,7 +233,7 @@ MZPlus.Core = MZPlus.getParams('<MZPlus>', {
         if (clear !== undefined ? clear : this.clearBeforeRender)
         {
             if ( Array.isArray(clear))
-            this.renderTexture.clear(clear);
+                this.renderTexture.clear(clear);
         }
 
         displayObject.render(this);
