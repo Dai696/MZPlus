@@ -218,6 +218,20 @@ MZPlus.Core = MZPlus.getParams('<MZPlus>', {
 });
 
 
+($=> {
+    class Container extends PIXI.Container {
+        update() {
+            const children = this.children;
+            for (let i = 0; i < children.length; ++i) {
+                const child = children[i];
+                if (child.update) child.update();
+            }
+        }
+    }
+    $.Container = Container;
+
+})(MZPlus.Core);
+
 //-----------------------------------------------------------------------------
 // Aliases
 //-----------------------------------------------------------------------------
