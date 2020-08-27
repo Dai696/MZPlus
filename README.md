@@ -1,9 +1,9 @@
 # MZPlus
  MZPlus is the core library that most plugins use.
  
- Accessing plugin params: 
+###### Accessing plugin params: 
  
- To access plugins params use the code MZPlus.getParams(id)
+ To access plugins params use the code `js MZPlus.getParams(id)`
  
  The id is a way to make plugins not depend on the file name. In your plugins @plugindesc you can put a easy to look up ID name. 
  
@@ -31,8 +31,8 @@ Example:
  *@desc A test variable
  */
 
-MZPlus.getParams('<PluginTest>', {
-testVariable: 'insertDataHere'
-})
+MZPlus.getParams('<PluginTest>', {testVariable: 'insertDataHere'})
 ```
+###### Accessing plugin command args
 
+Access plugin command args via MZPlus. `js MZPlus.argsToData(args);`
