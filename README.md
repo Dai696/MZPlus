@@ -39,7 +39,7 @@ Access plugin command args via the call`MZPlus.argsToData(args);`
 
 Example: 
 ```js
- $.registerCommand(PluginTest, 'pluginCommand', function (args) {
+ PluginManager.registerCommand(PluginTest, 'pluginCommand', function (args) {
 	args =  MZPlus.argsToData(args);
 	console.log(args);
     });
