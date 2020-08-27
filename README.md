@@ -9,10 +9,11 @@
  
 Example: 
 
-```
+```js
 /*
  *@target MZ
- *@plugindesc <PluginTest> This plugin allows for layered parallax maps and infinite fog layers.*/
+ *@plugindesc <PluginTest> This plugin allows for layered parallax maps and infinite fog layers.
+ */
  
  MZPlus.getParams('<PluginTest>')
  ```
@@ -23,11 +24,15 @@ Default Params:
 You can pass a default object in and set default params for properties set.
 
 Example: 
-```
- @param testVariable
- @text TestVariable
- @desc A test variable
-```
+```js
+/*
+ *@param testVariable
+ *@text TestVariable
+ *@desc A test variable
+ */
+
 MZPlus.getParams('<PluginTest>', {
 testVariable: 'insertDataHere'
 })
+```
+
