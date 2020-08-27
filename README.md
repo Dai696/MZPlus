@@ -3,7 +3,7 @@
  
 ###### Accessing plugin params: 
  
- To access plugins params use the code `js MZPlus.getParams(id)`
+ To access plugins params use the code `MZPlus.getParams(id)`
  
  The id is a way to make plugins not depend on the file name. In your plugins @plugindesc you can put a easy to look up ID name. 
  
@@ -35,4 +35,13 @@ MZPlus.getParams('<PluginTest>', {testVariable: 'insertDataHere'})
 ```
 ###### Accessing plugin command args
 
-Access plugin command args via MZPlus. `js MZPlus.argsToData(args);`
+Access plugin command args via the call`MZPlus.argsToData(args);`
+
+Example: 
+```js
+ $.registerCommand(PluginTest, 'pluginCommand', function (args) {
+	args =  MZPlus.argsToData(args);
+	console.log(args);
+    });
+
+```
